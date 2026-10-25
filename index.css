@@ -16,19 +16,24 @@ img {
 
 
 
+
 header {
-    padding: 25px 3%;
+    padding: 0;
+    background-color: #ffffff;
 }
 
+/* Barra azul superior */
 .topo {
     background-color: #1e4597;
     color: white;
-    padding: 9px 15px;
+    margin: 0 2.6%;
+    padding: 12px 22px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 15px;
 }
+
 
 .links-topo,
 .links-institucionais {
@@ -76,15 +81,17 @@ header {
 }
 
 
+
 .pesquisa {
     width: 65%;
-    max-width: 650px;
-    height: 36px;
+    max-width: 850px;
+    height: 40px;
     margin: 0 auto;
     display: flex;
-    border: 1px solid #dddddd;
+    border: 1px solid #eeeeee;
     border-radius: 30px;
     overflow: hidden;
+    background-color: #ffffff;
 }
 
 .pesquisa input {
@@ -93,7 +100,27 @@ header {
     padding: 10px 15px;
     border: none;
     outline: none;
+    background-color: #ffffff;
 }
+
+.pesquisa button {
+    border: none;
+    background-color: #07569d;
+    color: white;
+    padding: 0 25px;
+    border-radius: 0 30px 30px 0;
+    cursor: pointer;
+}
+
+
+header .pesquisa {
+    position: relative;
+}
+
+header .menu-principal {
+    padding: 12px 3%;
+}
+
 
 .pesquisa button {
     border: none;
@@ -661,4 +688,104 @@ footer {
 
 .benta {
     text-align: center;
+}
+
+
+header {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+header .pesquisa {
+    width: 100%;
+    max-width: none;
+    height: 48px;
+    padding: 7px 18%;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 0;
+    background-color: #f5f5f5;
+}
+
+header .pesquisa input {
+    border: 1px solid #e5e5e5;
+    border-radius: 25px 0 0 25px;
+}
+
+header .pesquisa button {
+    border-radius: 0 25px 25px 0;
+}
+
+
+.inovacao {
+    display: flex;
+    width: 100%;
+    margin: 0;
+    height: 300px;
+    background-color: #60b8bc;
+    overflow: hidden;
+}
+
+.texto-inovacao {
+    width: 63%;
+    padding: 30px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.texto-inovacao h2 {
+    color: white;
+    font-size: 28px;
+    line-height: 1.3;
+    max-width: 650px;
+    margin-bottom: 30px;
+}
+
+.texto-inovacao a {
+    display: inline-block;
+    background-color: white;
+    color: #07569d;
+    padding: 16px 35px;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.imagens-inovacao {
+    width: 37%;
+    height: 300px;
+    background-color: #59418f;
+    overflow: hidden;
+    clip-path: polygon(12% 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.imagens-inovacao img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Celulares */
+@media (max-width: 600px) {
+    .inovacao {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .texto-inovacao,
+    .imagens-inovacao {
+        width: 100%;
+    }
+
+    .texto-inovacao h2 {
+        font-size: 22px;
+    }
+
+    .imagens-inovacao {
+        height: 250px;
+        clip-path: none;
+    }
 }
